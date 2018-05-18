@@ -175,7 +175,7 @@ defmodule GpioRpi do
       {_, {:data, <<?r,response::binary>>}} ->
         :erlang.binary_to_term(response)
     after
-      500 -> :timedout
+      5000 -> :timedout
     end
   end
 
